@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 Web scraping is a powerful technique used to collect publicly available data from websites for analytics, automation, research, and business intelligence. However, building a scraper that is both reliable and scalable requires more than just sending HTTP requests—it demands careful architecture, respect for target systems, and strong engineering practices.
 
