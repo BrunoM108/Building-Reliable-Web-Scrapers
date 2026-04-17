@@ -14,13 +14,13 @@ Responsible for fetching HTML or API data.
 
 Key responsibilities:
 
-HTTP request handling
+- HTTP request handling
 
-Headers management (User-Agent, Accept-Language)
+- Headers management (User-Agent, Accept-Language)
 
-Timeout and retry logic
+- Timeout and retry logic
 
-Connection pooling
+- Connection pooling
 
 1.2 Parsing Layer
 
@@ -28,19 +28,19 @@ Transforms raw responses into structured data.
 
 Common tools:
 
-BeautifulSoup (Python)
+- BeautifulSoup (Python)
 
-lxml
+- lxml
 
-Cheerio (Node.js)
+- Cheerio (Node.js)
 
 Responsibilities:
 
-HTML traversal
+- HTML traversal
 
-Data extraction
+- Data extraction
 
-Cleaning and normalization
+- Cleaning and normalization
 
 1.3 Queue / Task Layer
 
@@ -48,21 +48,21 @@ Ensures scalability and parallelism.
 
 Tools:
 
-Redis queues
+- Redis queues
 
-RabbitMQ
+- RabbitMQ
 
-Celery (Python)
+- Celery (Python)
 
-BullMQ (Node.js)
+- BullMQ (Node.js)
 
 Responsibilities:
 
-Job scheduling
+- Job scheduling
 
-Retry failed tasks
+- Retry failed tasks
 
-Rate control per domain
+- Rate control per domain
 
 1.4 Storage Layer
 
@@ -70,11 +70,11 @@ Stores structured data.
 
 Options:
 
-PostgreSQL (structured data)
+- PostgreSQL (structured data)
 
-MongoDB (semi-structured)
+- MongoDB (semi-structured)
 
-S3 / object storage (raw HTML snapshots)
+- S3 / object storage (raw HTML snapshots)
 
 # 2. Building Resilient Request Handling
 
@@ -84,47 +84,45 @@ Retry Strategy
 
 Implement exponential backoff:
 
-1st retry: 1s
+- 1st retry: 1s
 
-2nd retry: 2s
+- 2nd retry: 2s
 
-3rd retry: 4s
+- 3rd retry: 4s
 
-Timeout Handling
+- Timeout Handling
 
 Always define:
 
-Connection timeout
+- Connection timeout
 
-Read timeout
+- Read timeout
 
-Idempotent Requests
+- Idempotent Requests
 
 Ensure repeated requests do not corrupt data or duplicate entries.
 
 # 3. Ethical Crawling Practices
 
-A professional scraper should always follow responsible guidelines:
-
-Respect robots.txt
+A professional scraper should always follow responsible guidelines
 
 Before scraping any domain, check:
 
-Allowed paths
+- Allowed paths
 
-Crawl delays
+- Crawl delays
 
-Disallowed sections
+- Disallowed sections
 
-Rate Limiting
+- Rate Limiting
 
 Avoid overwhelming servers:
 
-Add delays between requests
+- Add delays between requests
 
-Use domain-level throttling
+- Use domain-level throttling
 
-Data Minimization
+- Data Minimization
 
 Only collect what is necessary for your use case.
 
@@ -132,31 +130,31 @@ Only collect what is necessary for your use case.
 
 Proxies are commonly used in large-scale scraping systems for:
 
-Load distribution
+- Load distribution
 
-Geographic testing
+- Geographic testing
 
-Request routing
+- Request routing
 
-Types of Proxies
+- Types of Proxies
 
-Datacenter proxies: Fast, cost-effective
+- Datacenter proxies: Fast, cost-effective
 
-Residential proxies: More stable for geo-specific data
+- Residential proxies: More stable for geo-specific data
 
-Rotating proxies: Automatically switch IPs per request
+- Rotating proxies: Automatically switch IPs per request
 
-Proxy Integration Strategy
+- Proxy Integration Strategy
 
 A good architecture:
 
-Assign proxy per request
+- Assign proxy per request
 
-Rotate based on failure rate
+- Rotate based on failure rate
 
-Monitor latency per proxy
+- Monitor latency per proxy
 
-Blacklist unstable endpoints
+- Blacklist unstable endpoints
 
 # 5. Avoiding Common Scraper Failures
 
@@ -166,83 +164,83 @@ Websites frequently update layouts.
 
 Solution:
 
-Use resilient selectors (avoid deeply nested paths)
+- Use resilient selectors (avoid deeply nested paths)
 
-Implement fallback parsing logic
+- Implement fallback parsing logic
 
 5.2 Rate Limiting Issues
 
 Symptoms:
 
-HTTP 429 responses
+- HTTP 429 responses
 
-Sudden request blocking
+- Sudden request blocking
 
 Solution:
 
-Reduce concurrency
+- Reduce concurrency
 
-Add adaptive delays
+- Add adaptive delays
 
 5.3 Memory Leaks in Long-Running Jobs
 
 Solution:
 
-Batch processing
+- Batch processing
 
-Clear queues periodically
+- Clear queues periodically
 
-Restart workers safely
+- Restart workers safely
 
 # 6. Scaling to Millions of Requests
 
 To scale scraping systems:
 
-Horizontal Scaling
+- Horizontal Scaling
 
-Run multiple worker instances
+- Run multiple worker instances
 
-Use containerization (Docker)
+- Use containerization (Docker)
 
-Distributed Queue System
+- Distributed Queue System
 
-Central task queue (Redis/RabbitMQ)
+- Central task queue (Redis/RabbitMQ)
 
-Multiple consumers
+- Multiple consumers
 
-Monitoring
+- Monitoring
 
 Track:
 
-Success rate
+- Success rate
 
-Request latency
+- Request latency
 
-Error distribution
+- Error distribution
 
 Tools:
 
-Prometheus
+- Prometheus
 
-Grafana
+- Grafana
 
-ELK Stack
+- ELK Stack
 
 # 7. Suggested Tech Stack
 
 A modern production scraper might use:
 
-Python / Node.js (core logic)
+- Python / Node.js (core logic)
 
-Scrapy or Playwright (automation)
+- Scrapy or Playwright (automation)
 
-Redis (queue system)
+- Redis (queue system)
 
-PostgreSQL (storage)
+- PostgreSQL (storage)
 
-Docker (deployment)
+- Docker (deployment)
 
-Nginx (reverse proxy)
+- Nginx (reverse proxy)
 
 # Conclusion
 
