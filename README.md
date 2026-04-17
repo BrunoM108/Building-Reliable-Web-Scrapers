@@ -1,6 +1,6 @@
 # Introduction
 
-Web scraping is a powerful technique used to collect publicly available data from websites for analytics, automation, research, and business intelligence. However, building a scraper that is both reliable and scalable requires more than just sending HTTP requests—it demands careful architecture, respect for target systems, and strong engineering practices.
+Web scraping is a powerful technique used to collect publicly available data from websites for analytics, automation, research, and business intelligence. However, building a scraper that is both reliable and scalable requires more than just sending HTTP requests it demands careful architecture, respect for target systems, and strong engineering practices.
 
 This article outlines how to design production-grade scraping systems with focus on stability, maintainability, and ethical data extraction.
 
@@ -16,7 +16,7 @@ Key responsibilities:
 
 - HTTP request handling
 
-- Headers management (User-Agent, Accept-Language)
+- Headers management (User Agent, Accept Language)
 
 - Timeout and retry logic
 
@@ -72,7 +72,7 @@ Options:
 
 - PostgreSQL (structured data)
 
-- MongoDB (semi-structured)
+- MongoDB (semi structured)
 
 - S3 / object storage (raw HTML snapshots)
 
@@ -120,7 +120,7 @@ Avoid overwhelming servers:
 
 - Add delays between requests
 
-- Use domain-level throttling
+- Use domain level throttling
 
 - Data Minimization
 
@@ -128,7 +128,7 @@ Only collect what is necessary for your use case.
 
 # 4. Proxy Usage in Scraping Systems
 
-Proxies are commonly used in large-scale scraping systems for:
+Proxies are commonly used in large scale scraping systems for:
 
 - Load distribution
 
@@ -138,9 +138,9 @@ Proxies are commonly used in large-scale scraping systems for:
 
 - Types of Proxies
 
-- Datacenter proxies: Fast, cost-effective
+- Datacenter proxies: Fast, cost effective
 
-- Residential proxies: More stable for geo-specific data
+- Residential proxies: More stable for geo specific data
 
 - Rotating proxies: Automatically switch IPs per request
 
@@ -182,7 +182,7 @@ Solution:
 
 - Add adaptive delays
 
-5.3 Memory Leaks in Long-Running Jobs
+5.3 Memory Leaks in Long Running Jobs
 
 Solution:
 
