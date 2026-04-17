@@ -244,4 +244,4 @@ A modern production scraper might use:
 
 # Conclusion
 
-A high-quality scraping system is not just about extracting data—it is about building a resilient, scalable, and maintainable data pipeline. Engineers who focus on architecture, error handling, and ethical practices build systems that last and scale effectively.
+A high-quality scraping system is not just about extracting data it is about building a resilient, scalable, and maintainable data pipeline. Engineers who focus on architecture, error handling, and ethical practices build systems that last and scale effectively.
