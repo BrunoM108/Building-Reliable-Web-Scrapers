@@ -93,7 +93,7 @@ Data Minimization
 
 Only collect what is necessary for your use case.
 
-4. Proxy Usage in Scraping Systems
+# 4. Proxy Usage in Scraping Systems
 
 Proxies are commonly used in large-scale scraping systems for:
 Load distribution
