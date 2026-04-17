@@ -13,9 +13,13 @@ A robust scraping system is usually composed of four layers
 Responsible for fetching HTML or API data.
 
 Key responsibilities:
+
 HTTP request handling
+
 Headers management (User-Agent, Accept-Language)
+
 Timeout and retry logic
+
 Connection pooling
 
 1.2 Parsing Layer
